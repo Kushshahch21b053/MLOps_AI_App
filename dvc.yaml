@@ -1,0 +1,24 @@
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py --raw_data_path data/raw --processed_data_path data/processed
+    deps:
+      - scripts/preprocess.py
+      - data/raw
+    outs:
+      - data/processed
+  
+  featurize:
+    cmd: python scripts/feature_engineering.py --processed_data_path data/processed --features_path data/features
+    deps:
+      - scripts/feature_engineering.py
+      - data/processed
+    outs:
+      - data/features
+  
+  train:
+    cmd: python models/train.py --features_path data/features
+    deps:
+      - models/train.py
+      - data/features
+    outs:
+      - models/model.pkl
