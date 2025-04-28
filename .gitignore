@@ -1,0 +1,17 @@
+__pycache__/
+data/raw/
+data/processed/
+data/features/
+mlflow/
+airflow.config
+airflow.db
+models/saved
+
+*.py[cod]
+*$py.class
+
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+logs/
+/models
