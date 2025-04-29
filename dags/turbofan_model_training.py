@@ -7,7 +7,6 @@ from the data processing pipeline. It integrates with MLflow for experiment trac
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.operators.bash import BashOperator
 import mlflow
 from mlflow.tracking import MlflowClient
 import sys

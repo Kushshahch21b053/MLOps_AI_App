@@ -1,0 +1,468 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Layout */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3498db;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #3498db;
+  color: #3498db;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Feature cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+}
+
+.btn.primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn.secondary:hover {
+  background-color: #bdc3c7;
+  transform: translateY(-2px);
+}
+
+/* Prediction form */
+.prediction-section,
+.pipeline-section,
+.manual-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.prediction-section h1,
+.pipeline-section h1,
+.manual-section h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.settings-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Prediction results */
+.prediction-result {
+  background-color: #f1f9ff;
+  border: 1px solid #a8d5ff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.prediction-result h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.rul-value {
+  font-size: 3rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.unit {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+}
+
+.confidence-interval,
+.timestamp {
+  margin-top: 0.5rem;
+  color: #34495e;
+}
+
+.error-message {
+  background-color: #ffecec;
+  border: 1px solid #f5aca6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #cc0000;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Pipeline visualization */
+.pipeline-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.pipeline-visualization {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.pipeline-stages {
+  display: flex;
+  align-items: center;
+  min-width: min-content;
+}
+
+.stage-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.pipeline-stage {
+  background-color: #e3fcef;
+  border: 1.5px solid #4caf50;
+  border-radius: 8px;
+  padding: 1.2rem;
+  min-width: 160px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.pipeline-stage.success {
+  background-color: #e3fcef;
+  border-color: #4caf50;
+}
+
+.pipeline-stage.running {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.pipeline-stage.failed {
+  background-color: #ffebee;
+  border-color: #f44336;
+}
+
+.pipeline-stage h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.stage-connector {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #7f8c8d;
+}
+
+.last-run {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+/* Pipeline stats */
+.pipeline-stats,
+.pipeline-links {
+  margin-top: 2rem;
+}
+
+.pipeline-stats h3,
+.pipeline-links h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-card h4 {
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Tool links */
+.tool-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.tool-link {
+  display: block;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool-name {
+  display: block;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+
+.tool-desc {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* User manual styles */
+.manual-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-manual-section {
+  margin-bottom: 2rem;
+}
+
+.user-manual-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.user-manual-section p {
+  margin-bottom: 1rem;
+}
+
+.user-manual-section ul,
+.user-manual-section ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user-manual-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  .settings-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -3,12 +3,11 @@ Main FastAPI application for RUL prediction serving.
 
 This module creates a FastAPI application to serve the turbofan engine RUL model.
 """
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 import mlflow
 import logging
-import time
 import os
 from api.endpoints import health, prediction
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST

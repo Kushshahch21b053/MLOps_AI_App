@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Manual | Turbofan RUL</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Turbofan RUL Predictor</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/predict.html">Predict</a></li>
+          <li><a href="/pipeline.html">ML Pipeline</a></li>
+          <li><a href="/manual.html" class="active">User Manual</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="manual-section">
+        <h1>User Manual</h1>
+
+        <div class="manual-container">
+          <div class="user-manual-section">
+            <h3>Getting Started</h3>
+            <p>
+              The Turbofan RUL Prediction system helps you predict the Remaining
+              Useful Life of aircraft engines based on operational data and
+              sensor readings.
+            </p>
+            <p>
+              This manual will guide you through the key features of the
+              application.
+            </p>
+          </div>
+
+          <div class="user-manual-section">
+            <h3>Making Predictions</h3>
+            <ol>
+              <li>Navigate to the <a href="/predict.html">Predict</a> page</li>
+              <li>Enter the Engine ID number</li>
+              <li>Set the operational parameters (3 settings)</li>
+              <li>Enter the sensor readings (21 different sensors)</li>
+              <li>Click the "Predict RUL" button</li>
+              <li>
+                View the prediction results showing Remaining Useful Life in
+                cycles
+              </li>
+            </ol>
+            <p>
+              The confidence interval indicates the statistical range where the
+              actual RUL is likely to fall.
+            </p>
+          </div>
+
+          <div class="user-manual-section">
+            <h3>Understanding the ML Pipeline</h3>
+            <p>
+              The <a href="/pipeline.html">ML Pipeline</a> page visualizes how
+              data flows through our machine learning system:
+            </p>
+            <ul>
+              <li>
+                <strong>Data Processing</strong>: Raw sensor data is cleaned and
+                prepared
+              </li>
+              <li>
+                <strong>Feature Engineering</strong>: Key features are extracted
+                from the data
+              </li>
+              <li>
+                <strong>Model Training</strong>: ML algorithms learn patterns
+                from historical data
+              </li>
+              <li>
+                <strong>Model Evaluation</strong>: Performance is evaluated on
+                test data
+              </li>
+              <li>
+                <strong>Model Deployment</strong>: The best model is deployed to
+                the prediction service
+              </li>
+            </ul>
+          </div>
+
+          <div class="user-manual-section">
+            <h3>External Tools</h3>
+            <p>
+              For advanced users, the following tools provide deeper insights:
+            </p>
+            <ul>
+              <li>
+                <strong>Airflow</strong>: Orchestrates data and model pipelines
+              </li>
+              <li>
+                <strong>MLflow</strong>: Tracks experiments and model versions
+              </li>
+              <li>
+                <strong>Grafana</strong>: Visualizes system and model
+                performance metrics
+              </li>
+              <li>
+                <strong>Prometheus</strong>: Collects and stores metrics data
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Turbofan RUL Prediction | MLOps Project</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

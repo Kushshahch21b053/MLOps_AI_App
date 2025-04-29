@@ -302,6 +302,16 @@ services:
       - prometheus
     restart: always
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - fastapi
+    restart: always
+
   # Prometheus for monitoring
   # prometheus:
   #   image: prom/prometheus:latest
